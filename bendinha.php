@@ -2,4 +2,6 @@
 
 echo "benda";
 
+outra linha
+
 ?>
