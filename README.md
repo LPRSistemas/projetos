@@ -1,3 +1,6 @@
 -- LPR - Sistemas e Informática ---
 
-Repositório de todos os arquivos desenvolvidos
+Repositório dos arquivos do site de anuncios Fronteira Negócios.
+
+Observações.:
+Sempre commitar os arquivos antes de subir.
