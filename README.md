@@ -1,3 +1,3 @@
--- LPR - Sistemas e Informática ---
+--- LPR - Sistemas e Informática ---
 
 Repositório do sistema PW
