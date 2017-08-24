@@ -14,6 +14,7 @@
   <h2 class="w3-text-gray">Entrada de Serviços</h2><br>
   
 
+  <form action="novo_servico.php" method="post">
   <p>
   <label class="w3-text-gray"><b>Recebido por:</b></label>
   <select class="w3-select w3-border" name="recebido">
@@ -61,9 +62,31 @@
     <option value="3">Alta</option>
   </select></p>
 
-  <button style="margin-top: 1%;" class="w3-btn w3-gray">Registrar</button></p>
+  <input type="submit" style="margin-top: 1%;" class="w3-btn w3-gray" name="btRegistrar" value="Registrar">
+  </form>
+  </p>
 </form>
 </div>
 
 </body>
+
+<?php
+  
+  include 'conexao.php';
+
+  if(isset($_POST['btRegistrar'])){
+
+    $recebido = $_POST['recebido'];
+    $categoria = $_POST['categoria'];
+    $cliente = $_POST['cliente'];
+    $entrega = $_POST['entrega'];
+    $contato = $_POST['contato'];
+    $realizar = $_POST['comment'];
+    $preco = $_POST['preco'];
+    $categoria = $_POST['categoria'];
+
+  }
+
+?>
+
 </html>

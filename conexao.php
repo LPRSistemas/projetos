@@ -1,4 +1,4 @@
 
 <?php
-	$conexao = mysqli_connect("localhost","root","","sistema_elegance") or die("Erro ao conectar");
+	$conexao = mysqli_connect("localhost","root","","sistemalpr") or die("Erro ao conectar");
 ?>
