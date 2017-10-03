@@ -4,7 +4,6 @@
 
 <?php
 include 'bootstrap.php';
-include 'conexao.php';
 ?>
 
 	<title>Inscrição concurso BM</title>
@@ -13,7 +12,7 @@ include 'conexao.php';
 
 <h2>Formulário de inscrição concurso BM</h2>
 
-<form method="post" action="#">
+<form method="post" action="manipula_form.php">
 
 <div class="col-sm-6">
 
@@ -53,6 +52,8 @@ Email do cliente: <input type="text" name="email_cliente" class="form-control">
 </div>
 
 <input type="submit" name="cadastrar" value="Cadastrar" class="btn btn-primary">
+<input type="reset" name="limpar" value="Limpar formulário" class="btn btn-primary">
+<br><br>
 
 </div>
 
