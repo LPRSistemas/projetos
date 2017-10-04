@@ -31,4 +31,4 @@ $executa = mysqli_query($conexao, $insere);
 	alert("Cadastro realizado com sucesso");
 	window.location.replace("cadastrados.php");
 
-</script>
+</script> 
