@@ -10,6 +10,19 @@ include 'bootstrap.php';
 </head>
 <body>
 
+<script type="text/javascript">
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+}
+</script>
+
 <h2>Formulário de inscrição concurso BM</h2>
 
 <form method="post" action="manipula_form.php">
@@ -18,7 +31,7 @@ include 'bootstrap.php';
 
 <div class="form-group">
 Nome:<input type="text" name="nome" class="form-control">
-CPF:<input type="text" name="cpf" class="form-control">
+CPF:<input type="text" name="cpf" maxlength="14" class="form-control" OnKeyPress="formatar('###.###.###-##', this)">
 </div>
 
 <div class="form-group">
@@ -29,12 +42,12 @@ Cidade: <input type="text" name="cidade" class="form-control">
 
 <div class="form-group">
 Representante Legal: <input type="text" name="rep_legal" class="form-control">
-CPF do Representante Legal: <input type="text" name="cpf_rl" class="form-control">
+CPF do Representante Legal: <input type="text" maxlength="14" name="cpf_rl" class="form-control" OnKeyPress="formatar('###.###.###-##', this)">
 </div>
 
 <div class="form-group">
-Dia do vencimento: <input type="text" name="dia_vencimento" class="form-control">
-Primeira parcela: <input type="text" name="primeira_parcela" class="form-control">
+Dia do vencimento: <input type="text" name="dia_vencimento" class="form-control" maxlength="10">
+Primeira parcela: <input type="text" name="primeira_parcela" class="form-control" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
 Valor da inscrição: <input type="text" name="valor_insc" class="form-control">
 </div>
 

@@ -1,4 +1,5 @@
 <?php
+
 include 'conexao.php';
 
 $nome = $_POST['nome'];
@@ -24,3 +25,10 @@ $insere = "insert into formulario (nome, cpf, rua, numero_casa, cidade, rep_lega
 $executa = mysqli_query($conexao, $insere);
 
 ?>
+
+<script type="text/javascript">
+	
+	alert("Cadastro realizado com sucesso");
+	window.location.replace("cadastrados.php");
+
+</script>
