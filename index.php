@@ -25,7 +25,7 @@ function formatar(mascara, documento){
 
 <h2>Formulário de inscrição concurso BM</h2>
 
-<form method="post" action="manipula_form.php">
+<form method="post" action="pega_dados.php">
 
 <div class="col-sm-6">
 
