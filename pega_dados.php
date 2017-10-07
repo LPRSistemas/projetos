@@ -35,17 +35,20 @@ $email_cliente = $_POST['email_cliente'];
 		.caixa{
 			margin-left: 1%;
 			margin-right: 1%;
-			margin-top: 5%;
-			margin-bottom: 5%;
+			margin-top: 2%;
+			margin-bottom: 2%;
 			text-align: justify;
+		}
+		.fonte{
+			font-size: 75%;
 		}
 	</style>
 
 <div class="container col-xs-12 caixa">
 
 <div class="panel panel-default">
-  <div class="panel-heading" align="center"><img src="header.png"></div>
-  <div class="panel-body">
+  <div class="panel-heading" align="center"><img src="header.png" width="40%"></div>
+  <div class="panel-body fonte">
   <b>Eu:</b> <?php echo$nome ?>, <b>CPF:</b> <?php echo$cpf ?>, <b>Residente na Rua:</b> <?php echo$rua ?>, <b>Nº:</b> <?php echo$numero_casa ?>, cidade: <?php echo$cidade ?>, por  meu <b>representante legal: </b><?php echo$rep_legal ?>, brasileiro(a), <b>CPF:</b> <?php echo$cpf_rl ?> , DECLARO, sob pena de lei que tenho pleno conhecimento e estou de acordo com as condições estabelecidas pelo Foco Cursos Preparatórios, relativamente a matrícula, material e mensalidade, pertinentes ao ano 2017, a saber: <br>
 
 <b>1.</b> Após realizar a matrícula no curso programado pelo Foco Cursos Preparatórios, com o pagamento da inscrição, o cancelamento do respectivo curso poderá ser realizado, mediante as seguintes condições: <br>

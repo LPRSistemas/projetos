@@ -2,75 +2,135 @@
 <html>
 <head>
 
-<?php
-include 'bootstrap.php';
-?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="icons_google.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="js/lumino.glyphs.js"></script>
 
-	<title>Inscrição concurso BM</title>
+	<title>Login</title>
 </head>
 <body>
 
-<script type="text/javascript">
-function formatar(mascara, documento){
-  var i = documento.value.length;
-  var saida = mascara.substring(0,1);
-  var texto = mascara.substring(i)
-   
-  if (texto.substring(0,1) != saida){
-            documento.value += texto.substring(0,1);
-  }
-  
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<label class="navbar-brand" href="#"><span>Foco </span>- Cursos Preparatórios</label>
+			</div>
+		</div>
+</nav>
+
+<style type="text/css">
+body {
+  background-image: url('fundo_log.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-color: black;
 }
-</script>
 
-<h2>Formulário de inscrição concurso BM</h2>
+.form-signin input[type="text"] {
+        margin-bottom: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .form-signin .form-control {
+        position: relative;
+        font-size: 16px;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        height: auto;
+        padding: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .vertical-offset-100 {
+        padding-top: 100px;
+    }
+    .img-responsive {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    }
+    .panel {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    }
 
-<form method="post" action="pega_dados.php">
+</style>
 
-<div class="col-sm-6">
-
-<div class="form-group">
-Nome:<input type="text" name="nome" class="form-control">
-CPF:<input type="text" name="cpf" maxlength="14" class="form-control" OnKeyPress="formatar('###.###.###-##', this)">
-</div>
-
-<div class="form-group">
-Rua: <input type="text" name="rua" class="form-control">
-Nº: <input type="text" name="numero_casa" class="form-control">
-Cidade: <input type="text" name="cidade" class="form-control">
-</div>
-
-<div class="form-group">
-Representante Legal: <input type="text" name="rep_legal" class="form-control">
-CPF do Representante Legal: <input type="text" maxlength="14" name="cpf_rl" class="form-control" OnKeyPress="formatar('###.###.###-##', this)">
-</div>
-
-<div class="form-group">
-Dia do vencimento: <input type="text" name="dia_vencimento" class="form-control" maxlength="10">
-Primeira parcela: <input type="text" name="primeira_parcela" class="form-control" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
-Valor da inscrição: <input type="text" name="valor_insc" class="form-control">
-</div>
-
-<div class="form-group">
-Formade pagamento: <input type="text" name="forma_pgto_insc" class="form-control">
-Número de parcelas: <input type="text" name="num_parcelas" class="form-control">
-Valor das parcelas: <input type="text" name="valor_parcelas" class="form-control">
-</div>
-
-<div class="form-group">
-Forma de pagamento: <input type="text" name="forma_pgto_parc" class="form-control">
-Valor do material didático: <input type="text" name="valor_md" class="form-control">
-Forma de pagamento: <input type="text" name="forma_pgto_md" class="form-control">
-Email do cliente: <input type="text" name="email_cliente" class="form-control">
-</div>
-
-<input type="submit" name="cadastrar" value="Cadastrar" class="btn btn-primary">
-<input type="reset" name="limpar" value="Limpar formulário" class="btn btn-primary">
-<br><br>
-
-</div>
-
-</form>
-
+        <body>
+            <div class="container w3-animate-top">
+                <div class="row vertical-offset-100">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">                                
+                                <div class="row-fluid user-row">
+                                    <label>Login administrativo</label>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <form action="index.php" method="post">
+                                    
+                                        
+                                        <input class="form-control" placeholder="Login" name="login" type="text" required></br>
+                                        <input class="form-control" placeholder="Senha" name="senha" type="password" required>
+                                        <br>
+            <input type="submit" class="w3-button btn-lg w3-black btn-block w3-hover-blue" name="btLogar" value="ENTRAR »">
+                                  
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
 </body>
+
+
+<?php
+
+             include ('conexao.php');
+
+              if(isset($_POST['btLogar'])){
+
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
+
+
+ $log = "select * from login_sistema WHERE login ='$login' and senha = '$senha'";
+
+  $query = mysqli_query($conexao, $log) or die(mysql_error());
+  $qtd = mysqli_num_rows($query);
+
+  if($qtd == 0){
+    die('<script>alert("Login ou Senha Incorretos");</script>');
+  }else{
+  @session_start();
+  $_SESSION['login'] = $login;
+  }
+
+  header('location: form.php');
+}
+
+
+
+ ?>
 </html>
