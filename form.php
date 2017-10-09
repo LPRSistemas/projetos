@@ -90,12 +90,18 @@ Valor do material didático: <input type="text" name="valor_md" class="form-cont
 Forma de pagamento: <input type="text" name="forma_pgto_md" class="form-control">
 </div>
 
+<select class="w3-select w3-border" name="pagamento">
+  <option value="" disabled selected>Forma de pagamento</option>
+  <option value="1">Dinheiro</option>
+  <option value="2">Cartão</option>
+  <option value="3">Cheque</option>
+</select>
+
 <div class="form-group">
 Email para contato: <input type="text" name="email_cliente" class="form-control">
 </div>
 
-<input type="submit" name="imprimir" value="Imprimir" class="btn btn-primary"></a>
-<input type="submit" name="cadastrar" value="Cadastrar" class="btn w3-green">
+<input type="submit" name="confirmar" value="Confirmar" class="btn btn-primary"></a>
 <input type="reset" name="limpar" value="Limpar formulário" class="btn w3-red">
 <br><br>
 
@@ -106,31 +112,3 @@ Email para contato: <input type="text" name="email_cliente" class="form-control"
 
 </body>
 </html>
-
-<?php
-
-	if(isset($_POST['cadastrar'])){
-
-		$nome = $_POST['nome'];
-$cpf = $_POST['cpf'];
-$rua = $_POST['rua'];
-$numero_casa = $_POST['numero_casa'];
-$cidade = $_POST['cidade'];
-$rep_legal = $_POST['rep_legal'];
-$cpf_rl = $_POST['cpf_rl'];
-$dia_vencimento = $_POST['dia_vencimento'];
-$primeira_parcela = $_POST['primeira_parcela'];
-$valor_insc = $_POST['valor_insc'];
-$forma_pgto_insc = $_POST['forma_pgto_insc'];
-$num_parcelas = $_POST['num_parcelas'];
-$valor_parcelas = $_POST['valor_parcelas'];
-$forma_pgto_parc = $_POST['forma_pgto_parc'];
-$valor_md = $_POST['valor_md'];
-$forma_pgto_md = $_POST['forma_pgto_md'];
-$email_cliente = $_POST['email_cliente'];
-
-echo "<script>window.location.replace(target-new:tab, 'pega_dados.php');</script>";;
-		
-	}
-
-?>
