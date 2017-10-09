@@ -51,32 +51,52 @@ Nº: <input type="number" name="numero_casa" class="form-control">
 Cidade: <input type="text" name="cidade" class="form-control">
 </div>
 
-<div class="form-group">
+<p><b>Dados de indentificação do representante legal</b></p>
+<div class="form-group w3-half">
 Representante Legal: <input type="text" name="rep_legal" class="form-control">
+</div>
+<div class="form-group w3-half">
 CPF do Representante Legal: <input type="text" maxlength="14" name="cpf_rl" class="form-control" OnKeyPress="formatar('###.###.###-##', this)">
 </div>
 
-<div class="form-group">
-Dia do vencimento: <input type="text" name="dia_vencimento" class="form-control" maxlength="10">
-Primeira parcela: <input type="text" name="primeira_parcela" class="form-control" maxlength="10">
+<p><b>Quanto à inscrição</b></p>
+<div class="form-group w3-half">
 Valor da inscrição: <input type="text" name="valor_insc" class="form-control">
 </div>
-
-<div class="form-group">
+<div class="form-group w3-half">
 Formade pagamento: <input type="text" name="forma_pgto_insc" class="form-control">
+</div>
+
+<p><b>Quanto às parcelas</b></p>
+<div class="form-group w3-third">
+Dia do vencimento: <input type="text" name="dia_vencimento" class="form-control" maxlength="10">
+</div>
+<div class="form-group w3-third">
+Primeira parcela: <input type="text" name="primeira_parcela" class="form-control" maxlength="10" OnKeyPress="formatar('##/##/###', this)">
+</div>
+<div class="form-group w3-third">
 Número de parcelas: <input type="number" name="num_parcelas" class="form-control">
+</div>
+<div class="form-group w3-half">
 Valor das parcelas: <input type="text" name="valor_parcelas" class="form-control">
 </div>
-
-<div class="form-group">
+<div class="form-group w3-half">
 Forma de pagamento: <input type="text" name="forma_pgto_parc" class="form-control">
+</div>
+<div class="form-group w3-half">
 Valor do material didático: <input type="text" name="valor_md" class="form-control">
+</div>
+<div class="form-group w3-half">
 Forma de pagamento: <input type="text" name="forma_pgto_md" class="form-control">
-Email do cliente: <input type="text" name="email_cliente" class="form-control">
 </div>
 
-<input type="submit" name="cadastrar" value="Cadastrar" class="btn btn-primary">
-<input type="reset" name="limpar" value="Limpar formulário" class="btn btn-primary">
+<div class="form-group">
+Email para contato: <input type="text" name="email_cliente" class="form-control">
+</div>
+
+<input type="submit" name="imprimir" value="Imprimir" class="btn btn-primary"></a>
+<input type="submit" name="cadastrar" value="Cadastrar" class="btn w3-green">
+<input type="reset" name="limpar" value="Limpar formulário" class="btn w3-red">
 <br><br>
 
 </div>
@@ -86,3 +106,31 @@ Email do cliente: <input type="text" name="email_cliente" class="form-control">
 
 </body>
 </html>
+
+<?php
+
+	if(isset($_POST['cadastrar'])){
+
+		$nome = $_POST['nome'];
+$cpf = $_POST['cpf'];
+$rua = $_POST['rua'];
+$numero_casa = $_POST['numero_casa'];
+$cidade = $_POST['cidade'];
+$rep_legal = $_POST['rep_legal'];
+$cpf_rl = $_POST['cpf_rl'];
+$dia_vencimento = $_POST['dia_vencimento'];
+$primeira_parcela = $_POST['primeira_parcela'];
+$valor_insc = $_POST['valor_insc'];
+$forma_pgto_insc = $_POST['forma_pgto_insc'];
+$num_parcelas = $_POST['num_parcelas'];
+$valor_parcelas = $_POST['valor_parcelas'];
+$forma_pgto_parc = $_POST['forma_pgto_parc'];
+$valor_md = $_POST['valor_md'];
+$forma_pgto_md = $_POST['forma_pgto_md'];
+$email_cliente = $_POST['email_cliente'];
+
+echo "<script>window.location.replace(target-new:tab, 'pega_dados.php');</script>";;
+		
+	}
+
+?>
