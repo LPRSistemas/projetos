@@ -26,7 +26,9 @@ $valor_md = $_POST['valor_md'];
 $forma_pgto_md = $_POST['forma_pgto_md'];
 $email_cliente = $_POST['email_cliente'];
 
-echo($nome);
+$insere = "insert into alunos (nome, cpf, rua, numero_casa, cidade, rep_legal, cpf_rl, dia_vencimento, primeira_parcela, valor_insc, forma_pgto_insc, num_parcelas, valor_parcelas, forma_pgto_parc, valor_md, forma_pgto_md, email_cliente) values ('".$nome."', '".$cpf."', '".$rua."','".$numero_casa."', '".$cidade."', '".$rep_legal."', '".$cpf_rl."', '".$dia_vencimento."', '".$primeira_parcela."', '".$valor_insc."', '".$forma_pgto_insc."', '".$num_parcelas."', '".$valor_parcelas."', '".$forma_pgto_parc."', '".$valor_md."', '".$forma_pgto_md."', '".$email_cliente."')";
+
+$executa = mysqli_query($conexao, $insere);
 
 ?>
 
@@ -35,25 +37,11 @@ echo($nome);
 
 	<h1>Formulário Preenchido</h1>
 
-<form action="pega_dados.php" method="post">
-
-
+<form action="contrato.php" target="_blank" method="post">
 <input type="submit" name="imprimir" value="Imprimir">
-
 </form>
 
-<?php
 
-	if(isset($_POST['imprimir'])){
-
-	$salva = "insert into alunos (nome) values ('".$nome."')";
-
-$executa = mysqli_query($conexao, $salva);
-
-		header("Location: contrato.php");
-	}
-
-?>
 
 </body>
 </html>

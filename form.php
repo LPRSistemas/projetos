@@ -64,7 +64,14 @@ CPF do Representante Legal: <input type="text" maxlength="14" name="cpf_rl" clas
 Valor da inscrição: <input type="text" name="valor_insc" class="form-control">
 </div>
 <div class="form-group w3-half">
-Formade pagamento: <input type="text" name="forma_pgto_insc" class="form-control">
+Formade pagamento:
+<select class="w3-select w3-border" name="forma_pgto_insc">
+  <option value="" disabled selected>Forma de pagamento da inscrição</option>
+  <option value="Dinheiro">Dinheiro</option>
+  <option value="Cartão">Cartão</option>
+  <option value="Cheque">Cheque</option>
+  <option value="Boleto">Boleto</option>
+</select>
 </div>
 
 <p><b>Quanto às parcelas</b></p>
@@ -72,7 +79,22 @@ Formade pagamento: <input type="text" name="forma_pgto_insc" class="form-control
 Dia do vencimento: <input type="text" name="dia_vencimento" class="form-control" maxlength="10">
 </div>
 <div class="form-group w3-third">
-Primeira parcela: <input type="text" name="primeira_parcela" class="form-control" maxlength="10" OnKeyPress="formatar('##/##/###', this)">
+Mês da primeira parcela:
+<select class="w3-select w3-border" name="primeira_parcela">
+  <option value="" disabled selected>Selecione o mês</option>
+  <option value="Janeiro">Janeiro</option>
+  <option value="Fevereiro">Fevereiro</option>
+  <option value="Março">Março</option>
+  <option value="Abril">Abril</option>
+  <option value="Maio">Maio</option>
+  <option value="Junho">Junho</option>
+  <option value="Julho">Julho</option>
+  <option value="Agosto">Agosto</option>
+  <option value="Setembro">Setembro</option>
+  <option value="Outubro">Outubro</option>
+  <option value="Novembro">Novembro</option>
+  <option value="Dezembro">Dezembro</option>
+</select>
 </div>
 <div class="form-group w3-third">
 Número de parcelas: <input type="number" name="num_parcelas" class="form-control">
@@ -81,21 +103,30 @@ Número de parcelas: <input type="number" name="num_parcelas" class="form-contro
 Valor das parcelas: <input type="text" name="valor_parcelas" class="form-control">
 </div>
 <div class="form-group w3-half">
-Forma de pagamento: <input type="text" name="forma_pgto_parc" class="form-control">
+Forma de pagamento:
+<select class="w3-select w3-border" name="forma_pgto_parc">
+  <option value="" disabled selected>Forma de pagamento das parcelas</option>
+  <option value="Dinheiro">Dinheiro</option>
+  <option value="Cartão">Cartão</option>
+  <option value="Cheque">Cheque</option>
+  <option value="Boleto">Boleto</option>
+</select>
 </div>
 <div class="form-group w3-half">
 Valor do material didático: <input type="text" name="valor_md" class="form-control">
 </div>
 <div class="form-group w3-half">
-Forma de pagamento: <input type="text" name="forma_pgto_md" class="form-control">
+Forma de pagamento:
+<select class="w3-select w3-border w3-rounded" name="forma_pgto_md">
+  <option value="" disabled selected>Forma de pagamento do material</option>
+  <option value="Dinheiro">Dinheiro</option>
+  <option value="Cartão">Cartão</option>
+  <option value="Cheque">Cheque</option>
+  <option value="Boleto">Boleto</option>
+</select>
 </div>
 
-<select class="w3-select w3-border" name="pagamento">
-  <option value="" disabled selected>Forma de pagamento</option>
-  <option value="1">Dinheiro</option>
-  <option value="2">Cartão</option>
-  <option value="3">Cheque</option>
-</select>
+
 
 <div class="form-group">
 Email para contato: <input type="text" name="email_cliente" class="form-control">

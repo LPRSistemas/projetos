@@ -6,12 +6,12 @@
 	include 'bootstrap.php';
 	include 'conexao.php';
 
-	$busca = "select * from tratar_dados";
+	$busca = "select * from alunos";
 
 $query = mysqli_query($conexao, $busca);
 
 while($result = mysqli_fetch_array($query)){
-	$id = $result['id'];
+	$id = $result['id_inscricao'];
 	$nome = $result['nome'];
 	$cpf = $result['cpf'];
 	$rua = $result['rua'];
@@ -21,6 +21,7 @@ while($result = mysqli_fetch_array($query)){
 	$cpf_rl = $result['cpf_rl'];
 	$dia_vencimento = $result['dia_vencimento'];
 	$primeira_parcela = $result['primeira_parcela'];
+	$valor_parcelas = $result['valor_parcelas'];
 	$valor_insc = $result['valor_insc'];
 	$forma_pgto_insc = $result['forma_pgto_insc'];
 	$num_parcelas = $result['num_parcelas'];
@@ -72,11 +73,11 @@ b) Declaro meu interesse em cursar o Preparatório para o Concurso da Brigada Mi
 <b>Do pagamento:</b><br>
 <b>3. Os pagamentos deverão ser realizados até o dia: <?php echo$dia_vencimento ?> de cada mês, sendo a 1ª parcela no mês de: <?php echo$primeira_parcela ?>.</b> Após, serão cobrados 3% de multa + 0,03% de juro por dia de atraso. <br>
 
-<b>3.1.</b> Inscrição: R$<?php echo$valor_insc ?>. <?php echo$forma_pgto_insc ?><br>
+<b>3.1.</b> Inscrição: R$<?php echo$valor_insc ?>. Forma de pagamento: <?php echo$forma_pgto_insc ?><br>
 
 <b>3.2.</b> Os pagamentos referente ao curso, de acordo com a letra b do Item 1, deverão ser realizados em <?php echo$num_parcelas ?> vezes de R$<?php echo$valor_parcelas ?>. Forma de pagamento: <?php echo$forma_pgto_parc ?>.<br>
 
-<b>3.3.</b> Material Didático: R$<?php echo$valor_md ?>. Forma de pagamento: <?php echo$forma_pgto_md ?>3.2.<br>
+<b>3.3.</b> Material Didático: R$<?php echo$valor_md ?>. Forma de pagamento: <?php echo$forma_pgto_md ?><br>
 
 <b>4. As turmas somente funcionarão com um número mínimo de alunos, determinado pela Direção do curso.<br>
 
