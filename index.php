@@ -84,7 +84,7 @@ body {
                         <div class="panel panel-default">
                             <div class="panel-heading">                                
                                 <div class="row-fluid user-row">
-                                    <label>Login administrativo</label>
+                                    <label>Login do Sistema</label>
                                 </div>
                             </div>
                             <div class="panel-body">

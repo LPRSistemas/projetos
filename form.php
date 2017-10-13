@@ -126,10 +126,9 @@ Forma de pagamento:
 </select>
 </div>
 
-
-
+<br><br><br><br>
 <div class="form-group">
-Email para contato: <input type="text" name="email_cliente" class="form-control">
+E-mail para contato:<input type="text" name="email_cliente" class="form-control">
 </div>
 
 <input type="submit" name="confirmar" value="Confirmar" class="btn btn-primary"></a>
@@ -137,6 +136,7 @@ Email para contato: <input type="text" name="email_cliente" class="form-control"
 <br><br>
 
 </div>
+
 
 
 </form>

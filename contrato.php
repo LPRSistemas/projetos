@@ -6,12 +6,12 @@
 	include 'bootstrap.php';
 	include 'conexao.php';
 
-	$busca = "select * from alunos";
+	$busca = "select * from tratar_dados";
 
 $query = mysqli_query($conexao, $busca);
 
 while($result = mysqli_fetch_array($query)){
-	$id = $result['id_inscricao'];
+	$id = $result['id'];
 	$nome = $result['nome'];
 	$cpf = $result['cpf'];
 	$rua = $result['rua'];
