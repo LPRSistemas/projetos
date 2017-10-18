@@ -1,108 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <link rel="icon" href="images/icone.ico" type="image/x-icon">
+<title>Foco</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/datepicker3.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="icons_google.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script src="js/lumino.glyphs.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<title>Login</title>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> 
+
+<script src="js/jquery-2.2.3.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
+
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
-					
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<label class="navbar-brand" href="#"><span>Foco </span>- Cursos Preparatórios</label>
-			</div>
-		</div>
-</nav>
+  <div class="main-agileits">
+    <div class="mainw3-agileinfo form">
+    <h1 style="margin-bottom: 2%;">Entrada do sistema</h1>    
+      <div id="login">    
+        <form action="index.php" method="post"> 
+          <div class="field-wrap">
+            <label> Login</label>
+            <input type="text" name="login" required />
+          </div> 
+          <div class="field-wrap">
+            <label> Senha</label>
+            <input type="password" name="senha" required />
+          </div> 
+          
+          <input type="submit" name="btLogar" class="button button-block" value="Entrar">
+        </form> 
+      </div>
+         
+    </div>  
+  </div>  
+  
+  <script>
+  $('.form').find('input, textarea').on('keyup blur focus', function (e) { 
+    var $this = $(this),
+      label = $this.prev('label');
 
-<style type="text/css">
-body {
-  background-image: url('fundo_log.png');
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-attachment: fixed;
-  background-color: black;
-}
-
-.form-signin input[type="text"] {
-        margin-bottom: 5px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+      if (e.type === 'keyup') {
+        if ($this.val() === '') {
+        label.removeClass('active highlight');
+      } else {
+        label.addClass('active highlight');
+      }
+    } else if (e.type === 'blur') {
+      if( $this.val() === '' ) {
+        label.removeClass('active highlight'); 
+        } else {
+        label.removeClass('highlight');   
+        }   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+        label.removeClass('highlight'); 
+        } 
+      else if( $this.val() !== '' ) {
+        label.addClass('highlight');
+        }
     }
-    .form-signin input[type="password"] {
-        margin-bottom: 10px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-    }
-    .form-signin .form-control {
-        position: relative;
-        font-size: 16px;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        height: auto;
-        padding: 10px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    .vertical-offset-100 {
-        padding-top: 100px;
-    }
-    .img-responsive {
-    display: block;
-    max-width: 80%;
-    height: auto;
-    margin: auto;
-    }
-    .panel {
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    }
-
-</style>
-
-        <body>
-            <div class="container w3-animate-top">
-                <div class="row vertical-offset-100">
-                    <div class="col-md-4 col-md-offset-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">                                
-                                <div class="row-fluid user-row">
-                                    <label>Login do Sistema</label>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <form action="index.php" method="post">
-                                    
-                                        
-                                        <input class="form-control" placeholder="Login" name="login" type="text" required></br>
-                                        <input class="form-control" placeholder="Senha" name="senha" type="password" required>
-                                        <br>
-            <input type="submit" class="w3-button btn-lg w3-black btn-block w3-hover-blue" name="btLogar" value="ENTRAR »">
-                                  
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           </div>
+ 
+  }); 
+  </script>
 </body>
+</html>
 
 
 <?php
@@ -133,4 +99,3 @@ body {
 
 
  ?>
-</html>

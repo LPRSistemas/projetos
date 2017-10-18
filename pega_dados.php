@@ -37,6 +37,26 @@ $executa = mysqli_query($conexao, $insere);
 
 	<h1>Formulário Preenchido</h1>
 
+	<!--<?php
+		$nome
+		$cpf
+		$rua
+		$numero_casa
+		$cidade
+		$rep_legal
+		$cpf_rl
+		$dia_vencimento
+		$primeira_parcela
+		$valor_insc
+		$forma_pgto_insc
+		$num_parcelas
+		$valor_parcelas
+		$forma_pgto_parc
+		$valor_md
+		$forma_pgto_md
+		$email_cliente
+	?>-->
+
 <div class="row" style="margin-left: 1%;">
 <form action="contrato.php" target="_blank" method="post">
 
