@@ -10,6 +10,7 @@ import { ApixuProvider } from '../providers/apixu/apixu';
 import {HttpModule} from "@angular/http";
 import {DetalhesPage} from "../pages/detalhes/detalhes";
 
+
 @NgModule({
   declarations: [
     MyApp,

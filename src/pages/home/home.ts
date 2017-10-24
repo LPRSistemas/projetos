@@ -8,7 +8,7 @@ import {DetalhesPage} from "../detalhes/detalhes";
   templateUrl: 'home.html'
 })
 export class HomePage {
-  //Variável que recebe o nome digitado pelo usuário
+
   nomeCidade: string;
   temperatura: any;
 
