@@ -1,14 +1,47 @@
-<ion-header>
+<ion-header color="tema">
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Previsão do Tempo
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label>Cidade:</ion-label>
+    <ion-input [(ngModel)]="nomeCidade"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="buscaPrevisaoDoTempo()">OK</button>
+
+  <ion-card *ngIf="temperatura">
+    <ion-card-header>
+      {{temperatura?.location.name}}, {{temperatura?.current.temp_c}}ºC
+    </ion-card-header>
+    <ion-card-content>
+      <img style="width:50px" src="http:{{temperatura?.current.condition.icon}}">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Previsão para os próximos dias
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <button ion-item (click)="detalhes(prev)" *ngFor="let prev of temperatura?.forecast.forecastday.slice(1)">
+          <ion-label>
+            Dia: {{prev.date | date:'dd/MM'}} -
+              Maxima: {{prev.day.maxtemp_c}}ºC - Minima: {{prev.day.mintemp_c}}ºC
+          </ion-label>
+          <ion-icon item-right>
+            <img style="width: 50px" src="http:{{prev.day.condition.icon}}">
+          </ion-icon>
+
+        </button>
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
+
 </ion-content>
