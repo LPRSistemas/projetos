@@ -15,14 +15,17 @@
 <ion-content padding>
 <ion-card>
   <ion-card-content>
-    <ion-list>
 
+    <ion-list>
         <ion-icon item-left>
           <img style="width: 50px" src="http:{{diaPesquisa.hour[0].condition.icon}}">
         </ion-icon>
-
         <ion-label>
-          {{diaPesquisa.hour[0].time}} {{diaPesquisa.hour[0].temp_c}}ºC
+
+          <p id="prevs">
+              {{texto}}
+          </p>
+
         </ion-label>
       </ion-list>
 

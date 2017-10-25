@@ -15,20 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetalhesPage {
 
-  diaPesquisa: string;
-
+  diaPesquisa: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.diaPesquisa = this.navParams.get("data");
 
-
-
     do {
-      this.texto += "<ion-icon item-left><img style='width: 50px' src='http:"+this.diaPesquisa.hour[this.i].condition.icon+"'></ion-icon><ion-label>"+this.diaPesquisa.hour[this.i].time+"</ion-label>";
-      this.i++;
+
+      this.texto += this.diaPesquisa.hour[this.i].time;
+
+       this.i++;
 
     } while (this.i < 24);
-
 
   }
 
@@ -37,6 +35,5 @@ export class DetalhesPage {
   }
 
   texto: any;
-
-  i: number = 1;
+  i: number = 0;
 }
