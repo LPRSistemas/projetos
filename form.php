@@ -133,6 +133,7 @@ E-mail para contato:<input type="text" name="email_cliente" class="form-control"
 
 <input type="submit" name="confirmar" value="Confirmar" class="btn btn-primary"></a>
 <input type="reset" name="limpar" value="Limpar formulário" class="btn w3-red">
+<a href="pagina_inicial.php"><input type="button" name="voltar" value="Página inicial" class="btn w3-green"></a>
 <br><br>
 
 </div>

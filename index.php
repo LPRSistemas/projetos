@@ -12,7 +12,7 @@
 
 <script src="js/jquery-2.2.3.min.js"></script>
 
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -93,7 +93,7 @@
   $_SESSION['login'] = $login;
   }
 
-  header('location: form.php');
+  header('location: pagina_inicial.php');
 }
 
 
