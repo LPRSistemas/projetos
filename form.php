@@ -11,6 +11,7 @@ include 'bootstrap.php';
 <body>
 
 <script type="text/javascript">
+
 function formatar(mascara, documento){
   var i = documento.value.length;
   var saida = mascara.substring(0,1);
@@ -23,6 +24,13 @@ function formatar(mascara, documento){
 }
 </script>
 
+<style type="text/css">
+  
+  body{
+    background-color: gray;
+  }
+
+</style>
 
 <div style="margin-left: 10%; margin-right: 10%;">
 <form method="post" action="pega_dados.php" class="w3-container w3-card-4 w3-light-grey w3-text-black w3-margin col-xs-12">
@@ -127,6 +135,11 @@ Forma de pagamento:
 </div>
 
 <br><br><br><br>
+
+<div class="form-group">
+Curso: <input type="text" name="curso" class="form-control">
+</div>
+
 <div class="form-group">
 E-mail para contato:<input type="text" name="email_cliente" class="form-control">
 </div>
