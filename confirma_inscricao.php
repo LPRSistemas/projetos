@@ -24,10 +24,11 @@ while($result = mysqli_fetch_array($query)){
 	$forma_pgto_parc = $result['forma_pgto_parc'];
 	$valor_md = $result['valor_md'];
 	$forma_pgto_md = $result['forma_pgto_md'];
+	$curso = $result['curso'];
 	$email_cliente = $result['email_cliente'];
 }
 
-$insere = "insert into alunos (nome, cpf, rua, numero_casa, cidade, rep_legal, cpf_rl, dia_vencimento, primeira_parcela, valor_insc, forma_pgto_insc, num_parcelas, valor_parcelas, forma_pgto_parc, valor_md, forma_pgto_md, email_cliente) values ('".$nome."', '".$cpf."', '".$rua."','".$numero_casa."', '".$cidade."', '".$rep_legal."', '".$cpf_rl."', '".$dia_vencimento."', '".$primeira_parcela."', '".$valor_insc."', '".$forma_pgto_insc."', '".$num_parcelas."', '".$valor_parcelas."', '".$forma_pgto_parc."', '".$valor_md."', '".$forma_pgto_md."', '".$email_cliente."')";
+$insere = "insert into alunos (nome, cpf, rua, numero_casa, cidade, rep_legal, cpf_rl, dia_vencimento, primeira_parcela, valor_insc, forma_pgto_insc, num_parcelas, valor_parcelas, forma_pgto_parc, valor_md, forma_pgto_md, curso, email_cliente) values ('".$nome."', '".$cpf."', '".$rua."','".$numero_casa."', '".$cidade."', '".$rep_legal."', '".$cpf_rl."', '".$dia_vencimento."', '".$primeira_parcela."', '".$valor_insc."', '".$forma_pgto_insc."', '".$num_parcelas."', '".$valor_parcelas."', '".$forma_pgto_parc."', '".$valor_md."', '".$forma_pgto_md."', '".$curso."', '".$email_cliente."')";
 
 $executa = mysqli_query($conexao, $insere);
 
