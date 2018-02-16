@@ -222,7 +222,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6 animate-box">
-						<div class="fh5co-text">
+						<div class="fh5co-text with-plus">
 							<h2>Rob Smith</h2>
 							<span class="fh5co-meta">Photographer, Video Editor</span>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
