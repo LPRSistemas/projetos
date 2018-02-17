@@ -24,6 +24,7 @@ $valor_parcelas = $_POST['valor_parcelas'];
 $forma_pgto_parc = $_POST['forma_pgto_parc'];
 $valor_md = $_POST['valor_md'];
 $forma_pgto_md = $_POST['forma_pgto_md'];
+$curso = $_POST['curso'];
 $email_cliente = $_POST['email_cliente'];
 
 	if($rep_legal == null){
@@ -34,7 +35,7 @@ $email_cliente = $_POST['email_cliente'];
 		$cpf_rl = "-----";
 	}
 
-$insere = "insert into tratar_dados (nome, cpf, rua, numero_casa, cidade, rep_legal, cpf_rl, dia_vencimento, primeira_parcela, valor_insc, forma_pgto_insc, num_parcelas, valor_parcelas, forma_pgto_parc, valor_md, forma_pgto_md, email_cliente) values ('".$nome."', '".$cpf."', '".$rua."','".$numero_casa."', '".$cidade."', '".$rep_legal."', '".$cpf_rl."', '".$dia_vencimento."', '".$primeira_parcela."', '".$valor_insc."', '".$forma_pgto_insc."', '".$num_parcelas."', '".$valor_parcelas."', '".$forma_pgto_parc."', '".$valor_md."', '".$forma_pgto_md."', '".$email_cliente."')";
+$insere = "insert into tratar_dados (nome, cpf, rua, numero_casa, cidade, rep_legal, cpf_rl, dia_vencimento, primeira_parcela, valor_insc, forma_pgto_insc, num_parcelas, valor_parcelas, forma_pgto_parc, valor_md, forma_pgto_md, curso, email_cliente) values ('".$nome."', '".$cpf."', '".$rua."','".$numero_casa."', '".$cidade."', '".$rep_legal."', '".$cpf_rl."', '".$dia_vencimento."', '".$primeira_parcela."', '".$valor_insc."', '".$forma_pgto_insc."', '".$num_parcelas."', '".$valor_parcelas."', '".$forma_pgto_parc."', '".$valor_md."', '".$forma_pgto_md."', '".$curso."', '".$email_cliente."')";
 
 $executa = mysqli_query($conexao, $insere);
 
