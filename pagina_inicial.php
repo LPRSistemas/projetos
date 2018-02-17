@@ -61,7 +61,7 @@
     <h1 style="margin-bottom: 2%;">Bem-Vindo ao Sistema Gerencial Foco</h1>    
       <div id="login">
    	<a href="form.php"><button class="aqui w3-hover-red" style="height: 80px;">Realizar nova matrícula</button></a>
-  	<button class="aqui w3-hover-red" style="height: 80px;">Ver alunos matriculados</button>
+  	<a href="matriculados.php"><button class="aqui w3-hover-red" style="height: 80px;">Ver alunos matriculados</button></a>
   	<button class="aqui w3-hover-red" style="height: 80px;">Cadastrar novo admnistrador</button>
       </div>
          
